@@ -16,6 +16,8 @@ Antes de rodar o projeto, você precisará ter os seguintes componentes instalad
 - **Python 3.10**: O projeto é desenvolvido em Python.
 - **Bibliotecas Python**:
   - `pandas` (para manipulação de dados)
+  - `psycopg2` (para conexão com banco de dados)
+  - `dotenv` (para ler .env)
 - **Banco de Dados PostgreSQL**: Instalar e configurar um banco de dados PostgreSQL.
 - **Power BI**: Para visualizar os dados diretamente do banco.
 
@@ -30,3 +32,16 @@ Antes de rodar o projeto, você precisará ter os seguintes componentes instalad
 2. **Dataset utilizado**:
 
    link https://caelum-online-public.s3.amazonaws.com/2030-entendendo-formulas-dax/01/Preparando-o-ambiente.zip
+
+2. **Criar arquivo .env**:
+
+   Criar arquivo com nome de '.env' para colocar informações do banco de dados.
+   Exemplo de conteudo do arquivo:
+
+   DB_HOST=localhost
+   DB_NAME=meubanco
+   DB_USER=usuario
+   DB_PASSWORD=senha
+   DB_PORT=5432
+
+   Substituir por informações do seu banco de dados
