@@ -1,13 +1,19 @@
 # Projeto de Importação e Tratamento de Dados
 
-Este projeto tem como objetivo ler um arquivo Excel com várias planilhas, processar esses dados, armazená-los em um banco de dados PostgreSQL e, posteriormente, realizar consultas utilizando o Power BI diretamente no banco de dados.
+Este projeto tem como foco o tratamento e organização de dados de vendas, produtos e vendedores de uma empresa varejista fictícia.
+O objetivo é preparar esses dados para análises que apoiem a área de negócios na avaliação de desempenho, receita e identificação de oportunidades.
 
-## Funcionalidade
+Para isso, o projeto realiza a leitura de um arquivo Excel com múltiplas planilhas, faz o processamento e limpeza dos dados, armazena-os em um banco PostgreSQL e permite consultas via Power BI diretamente no banco.
 
-- **Leitura de Arquivo Excel**: O projeto é capaz de ler arquivos Excel contendo várias planilhas.
-- **Tratamento de Dados**: O tratamento envolve a limpeza, formatação e normalização dos dados.
-- **Armazenamento em PostgreSQL**: Após o tratamento, os dados são armazenados em um banco de dados PostgreSQL.
-- **Consulta via Power BI**: O Power BI se conecta diretamente ao banco de dados PostgreSQL para visualizar os dados.
+## Funcionalidades
+
+- Leitura de arquivos Excel com múltiplas abas (Itens Notas, Notas, Produtos, Vendedores);
+- Limpeza e tratamento dos dados (remoção de colunas vazias, padronização de nomes e tipos);
+- Criação de novas colunas calculadas para enriquecer a análise (ex: valor total da venda);
+- Validação das chaves estrangeiras para garantir integridade dos dados;
+- Criação das tabelas no PostgreSQL e inserção dos dados tratados;
+- Consulta dos dados via Power BI diretamente no banco.
+
 
 ## Pré-requisitos
 
@@ -45,3 +51,10 @@ Antes de rodar o projeto, você precisará ter os seguintes componentes instalad
    DB_PORT=5432
 
    Substituir por informações do seu banco de dados
+
+## Próximos passos
+
+- Automatizar o pipeline com ferramentas de orquestração como Apache Airflow ou Azure Data Factory;
+- Migrar o processamento para Azure Databricks utilizando PySpark para escalabilidade;
+- Implementar monitoramento e alertas para garantir qualidade e disponibilidade dos dados;
+- Desenvolver dashboards interativos mais complexos no Power BI.
